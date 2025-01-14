@@ -208,4 +208,7 @@ print(f"Predicted Sentiment: {predicted_sentiment}")
 * **Visualizing results:** Create visualizations to better understand the model's predictions and identify patterns in the data.
 
 This notebook provides a basic framework for sentiment analysis.
-
+**TASK OUTCOME**:
+![SENTIMENT R](https://github.com/user-attachments/assets/d095e3a9-0df7-4495-b860-37a0566c7327)
+![tableau-sentiment-analysis-screen](https://github.com/user-attachments/assets/fd331889-6fcb-4bc7-906b-8e035fe804e3)
+![sentiment-stats EXCEL](https://github.com/user-attachments/assets/2616d725-b605-48dd-b79f-f5b57f122cf2)
