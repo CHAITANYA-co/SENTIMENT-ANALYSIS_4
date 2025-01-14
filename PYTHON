@@ -1,0 +1,64 @@
+#PYTHON
+```python
+from textblob import TextBlob
+
+def sentiment_analysis(text):
+  """
+  Performs sentiment analysis on the given text using TextBlob.
+
+  Args:
+    text: The input text string.
+
+  Returns:
+    A tuple containing the polarity (float between -1 and 1) and subjectivity (float between 0 and 1).
+  """
+  analysis = TextBlob(text)
+  return analysis.sentiment.polarity, analysis.sentiment.subjectivity
+
+# Example usage
+text = "This movie was absolutely fantastic!"
+polarity, subjectivity = sentiment_analysis(text)
+
+print(f"Polarity: {polarity}") 
+print(f"Subjectivity: {subjectivity}") 
+
+# Interpretation:
+# Polarity: 
+#   -1: Negative 
+#    0: Neutral
+#    1: Positive
+
+# Subjectivity: 
+#   0: Objective 
+#   1: Subjective
+```
+
+**Explanation:**
+
+1. **Import necessary library:** 
+   - `from textblob import TextBlob`: Imports the TextBlob library, which provides easy-to-use functions for natural language processing tasks, including sentiment analysis.
+
+2. **Define the `sentiment_analysis` function:** 
+   - Takes the input text as an argument.
+   - Creates a TextBlob object from the input text.
+   - Extracts the polarity and subjectivity scores from the TextBlob object.
+   - Returns the polarity and subjectivity scores as a tuple.
+
+3. **Example usage:** 
+   - Creates a sample text string.
+   - Calls the `sentiment_analysis` function to analyze the sentiment of the text.
+   - Prints the polarity and subjectivity scores.
+
+**Key Points:**
+
+* **Polarity:** Represents the sentiment orientation (positive, negative, or neutral).
+* **Subjectivity:** Measures the degree to which a statement is based on personal opinions or facts.
+
+This is a basic example using TextBlob. For more advanced sentiment analysis tasks, you can explore other libraries like NLTK, spaCy, or utilize machine learning models (e.g., Support Vector Machines, Naive Bayes) for more sophisticated analysis.
+
+**Remember:**
+
+* **Data Cleaning:** Before applying sentiment analysis, it's essential to clean the text data by removing punctuation, converting to lowercase, and handling any potential issues like HTML tags or special characters.
+* **Contextual Considerations:** Sentiment analysis can be influenced by context, sarcasm, and irony. 
+* **Model Selection:** The choice of the sentiment analysis method (lexicon-based, machine learning, deep learning) will depend on the specific requirements and the complexity of the task.
+
